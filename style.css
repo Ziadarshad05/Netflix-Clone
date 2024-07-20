@@ -13,7 +13,7 @@ body {
 .main {
     background-image: url("assets/images/bg.jpg");
     background-position: center center;
-    background-size: max(1200px, 100vw);
+    background-size: cover;
     background-repeat: no-repeat;
     height: 644px;
     position: relative;
@@ -38,7 +38,6 @@ nav {
 }
 
 nav img {
-    color: red;
     width: 130px;
     position: relative;
     z-index: 10;
@@ -96,7 +95,6 @@ nav button {
     border-radius: 4px;
     border: 1px solid white;
     cursor: pointer;
-
 }
 
 .btn-red {
@@ -111,6 +109,7 @@ nav button {
 .btn-red-sm {
     background-color: red;
     color: white;
+    text-decoration: none;
 }
 
 .hero-buttons {
@@ -138,8 +137,6 @@ nav button {
     justify-content: center;
     align-items: center;
 }
-
-
 
 .secImg {
     position: relative;
@@ -169,12 +166,9 @@ section.first>div :nth-child(1) {
     font-weight: bolder;
 }
 
-
 section.first>div :nth-child(2) {
     font-size: 24px;
-
 }
-
 
 .faq h2 {
     text-align: center;
@@ -219,15 +213,195 @@ footer .questions {
     padding: 34px 0;
 }
 
-
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     color: white;
 }
 
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+/* Remove blue color and underline for visited links */
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Specific style for the sign-in button to remove underline and default link color */
+.btn-red-sm a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-red-sm a:visited {
+    color: white;
+}
+
+/* Center and style the buttons for Sign-In and Sign-Up Pages */
+.btn-primary {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #e50914;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #f40612;
+}
+
+.btn-primary:active {
+    background: #d10611;
+}
+
+/* Login Page Styles */
+.login-container {
+    max-width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.help-links a {
+    color: #757575;
+    text-decoration: none;
+}
+
+.signup-link {
+    margin-top: 20px;
+}
+
+.signup-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sign-Up Page Styles */
+.signup-container {
+    max-width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.signup-container h1 {
+    margin-bottom: 20px;
+}
+
+.signup-container .form-group {
+    margin-bottom: 15px;
+}
+
+.signup-container .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.signup-container .login-link {
+    margin-top: 20px;
+}
+
+.signup-container .login-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
 
+/* Browse Page Styles */
+header {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.browse-container {
+    padding: 20px;
+    color: white;
+}
+
+.content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.content-card {
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    width: calc(33.333% - 10px);
+}
+
+.content-card img {
+    width: 100%;
+    height: auto;
+}
+
+.content-info {
+    padding: 10px;
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 1300px) {
 
     nav{
@@ -279,13 +453,10 @@ footer .questions {
     .footer-item{
         align-items: center;
     }
- 
 
 }
 
-
-
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 768px) {
 
     .footer {
         display: grid;
@@ -294,14 +465,42 @@ footer .questions {
     }
 }
 
+@media screen and (max-width: 768px) {
+    nav img {
+        width: 100px;
+    }
 
-.footer a {
-    font-size: 14px;
-    color: white;
+    .hero span {
+        font-size: 16px;
+    }
+
+    .faqbox span {
+        font-size: 16px;
+    }
+
+    .faq h2 {
+        font-size: 20px;
+    }
 }
 
-.footer-item {
-    display: flex;
-    flex-direction: column;
-    gap: 23px;
+@media screen and (max-width: 480px) {
+    .login-container, .signup-container {
+        max-width: 90%;
+    }
+
+    .hero span {
+        font-size: 14px;
+    }
+
+    .hero-buttons input {
+        padding: 8px;
+    }
+
+    .hero-buttons .btn-red {
+        padding: 8px 16px;
+    }
+
+    section.first {
+        padding: 10px 0;
+    }
 }
